@@ -1,0 +1,9 @@
+{
+  "name": "brag-motion",
+  "description": "Motion extension for the brag launch-video skill: carried-element scene changes, timing profile and a pacing budget computed from the product flow.",
+  "version": "0.1.0",
+  "author": { "name": "nmedias", "url": "https://github.com/nmedias" },
+  "repository": "https://github.com/nmedias/brag-motion",
+  "license": "MIT",
+  "keywords": ["brag", "launch-video", "motion", "storyboard", "transitions", "hyperframes"]
+}

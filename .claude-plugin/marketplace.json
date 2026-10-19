@@ -1,0 +1,12 @@
+{
+  "name": "brag-motion",
+  "description": "brag-motion — motion extension for the brag launch-video skill",
+  "owner": { "name": "nmedias", "url": "https://github.com/nmedias" },
+  "plugins": [
+    {
+      "name": "brag-motion",
+      "source": "./",
+      "description": "Carried-element scene changes, timing profile and flow-based pacing for brag launch videos."
+    }
+  ]
+}
