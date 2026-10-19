@@ -1,0 +1,16 @@
+{
+  "name": "brag-motion",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Motion extension for the brag launch-video skill",
+  "license": "MIT",
+  "repository": "github:nmedias/brag-motion",
+  "scripts": {
+    "changeset": "changeset",
+    "version": "changeset version && node scripts/sync-version.mjs",
+    "tag": "changeset tag"
+  },
+  "devDependencies": {
+    "@changesets/cli": "3.0.3"
+  }
+}

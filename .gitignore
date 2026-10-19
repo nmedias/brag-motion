@@ -2,3 +2,4 @@
 evals/runs/
 HANDOFF-publish.md
 .idea/
+node_modules/

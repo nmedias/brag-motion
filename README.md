@@ -65,12 +65,13 @@ If you give no duration, the length follows the flow. brag-motion announces it i
 
 ## Updates
 
-Releases are versioned in `.claude-plugin/plugin.json`. Plugin installs update with `claude plugin update brag-motion@brag-motion`, or automatically if you enable auto-update for this marketplace in `/plugin`. Manual installs: `git pull` and copy again.
+Releases are versioned in `.claude-plugin/plugin.json` and listed in the [changelog](CHANGELOG.md). Plugin installs update with `claude plugin update brag-motion@brag-motion`, or automatically if you enable auto-update for this marketplace in `/plugin`. Manual installs: `git pull` and copy again.
 
 ## Development
 
 - Skill: `skills/brag-motion/SKILL.md`, build details in `skills/brag-motion/motion-reference.md`
 - Validate: `claude plugin validate --strict .`
+- Versioning: [Changesets](https://changesets.dev). Run `npm install` once, add a changeset with `npx changeset`, release with `npm run version` and `npm run tag`.
 - Evals: [`evals/`](evals/README.md). Every change to the skill is re-tested against the scenarios there before release.
 
 ## License

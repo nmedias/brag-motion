@@ -10,6 +10,8 @@ Extends the third-party [`brag`](https://github.com/latent-spaces/brag) and ship
 
 ```sh
 claude plugin validate --strict .   # validate manifests
+npm install                         # once, for changesets
+npx changeset                       # describe a change (patch/minor/major)
 claude --plugin-dir .               # try without installing
 wc -w skills/brag-motion/SKILL.md   # keep under ~500 words; details go to a reference file
 ```
@@ -17,7 +19,8 @@ wc -w skills/brag-motion/SKILL.md   # keep under ~500 words; details go to a ref
 ## Rules
 
 - Skill changes are test-first (superpowers:writing-skills): eval the current skill, fix only what failed, re-run, record scores in `evals/README.md`.
-- Release: bump `version` in `plugin.json` only, commit, tag `vX.Y.Z`, push. Never rename the plugin.
+- Every user-facing change adds a changeset (`npx changeset`) in the same commit.
+- Release: `npm run version` (bumps `package.json`, syncs `plugin.json`, writes `CHANGELOG.md`), commit, `npm run tag`, push with `--follow-tags`. Never edit versions by hand, never set one in `marketplace.json`. Never rename the plugin.
 
 ## Commit style
 
