@@ -12,3 +12,20 @@ R7 Real UI decomposed — the plan uses the real UI split into independently ani
 R8 Seam handling — where a rebuilt/composed layer hands over to a real recording (or vice versa), the plan makes the handover pixel-identical (same state, same geometry) so no jump is visible. 2 / 1 / 0.
 
 Max 16. Also note verbatim phrases showing the default habit (e.g. "crossfade", "dip to black", "zoom transition").
+
+## Build scenario (D) — score build-spec.md
+
+R1–R8 do not apply. Score per criterion 0 / 1 / 2. Max 10.
+
+R9 Text swap legible — in change 1 the two labels of different size never overlap illegibly: they share a baseline or edge instead of the centre, are cross-blurred, or their visible windows are staggered; the QA names illegible text overlap as a check. 2 = designed and checked, 1 = one of the two, 0 = centred 30–70 % crossfade with no check.
+R10 Opaque crop as target — in change 2 the plan sees that an opaque element screenshot covers the shell fill and keeps the morph a morph (live DOM, background cut out, crop fades in only on landing, or the shell carries the surface while the crop shows content only). 2 = handled with reason, 1 = handled without noticing why, 0 = crop on top of the shell from the start.
+R11 Carried element not doubled — wherever the carried element is also pixels inside an exiting part of A (grid image, full-page screenshot), that copy is masked, patched or excluded. 2 = every change, 1 = some, 0 = none.
+R12 Resolution for camera pushes — sources the camera pushes into are captured at ≥ the push factor (e.g. deviceScaleFactor ≥ 2, or a re-render at scale) or rendered as live DOM. 2 = stated with factor, 1 = vague, 0 = 1× screenshot scaled up.
+R13 Overhang clipped — in change 3 A's list (700 px) is clipped to the shrinking/landing shell (B's layout), so nothing sticks out below the 420 px card. 2 / 1 / 0.
+
+## brag-slim scenario (E) — score brag-plan.md + motion-spec.md
+
+Score R1–R8 as above, plus:
+
+R14 Length from the budget — with no duration given, the length is the pacing-budget sum, not brag-slim's "about 20 s" default or its 15–25 s law; the length is stated to the user in one line. 2 = both, 1 = one, 0 = cut to ≈ 20 s.
+R15 Return rule — the return to Path after Result (XP counts up, Lesson 2 unlocks) is a full scene with a look; the return after Settings (nothing new) is a pass-through without a look. 2 = both right, 1 = one, 0 = neither.
